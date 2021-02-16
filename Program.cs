@@ -11,7 +11,7 @@ namespace SnakeGame
     {
         static void Main(string[] args)
         {
-            Point p1 = new Point(1, 3, '*'); //с помощю класса сразу можно дать значеник е точкам
+            Point p1 = new Point(1, 3, '*');
             p1.Draw();
 
             Point p2 = new Point(4, 5, '#');
