@@ -11,40 +11,34 @@ namespace SnakeGame
     {
         static void Main(string[] args)
         {
-            Point p1 = new Point(1, 3, '*');
-            /*p1.x=1;
-            p1.y=3;
-            p1.sym= '*';*/
+            Console.SetWindowSize(80, 25);
+            //Отрисовка рамочки
+            HorizontalLine upLine = new HorizontalLine(0, 78, 0, '-');
+            HorizontalLine downLine = new HorizontalLine(0, 78, 24, '-');
+            VerticalLine leftLine = new VerticalLine(0, 24, 0, 'I');
+            VerticalLine rightLine = new VerticalLine(0, 24, 78, 'I');
+            upLine.Drow();
+            downLine.Drow();
+            leftLine.Drow();
+            rightLine.Drow();
+
+            //Отрисoвка точек
+            Point p = new Point(4, 5, '*');
+            p.Draw();
+            Snake snake = new Snake(p, 4, Direction.RIGHT);
+
+
+            /*Point p1 = new Point(1, 3, '*');
             p1.Draw();
 
             Point p2 = new Point(4, 5, '#');
-            /*p2.x=4;
-            p2.y=5;
-            p2.sym= '#';*/
 
             p2.Draw();
 
-            List<int> numlist = new List<int>();
-            numlist.Add(0);
-            numlist.Add(1);
-            numlist.Add(2);
+            HorizontalLine line = new HorizontalLine(5,10,8,'+');
+            line.Drow();
 
-            int x = numlist[0];
-            int y = numlist[1];
-            int z = numlist[2];
-
-            foreach (int i in numlist)
-            {
-                Console.WriteLine(i);
-            }
-
-            numlist.RemoveAt(0);
-
-            List<Point> pList = new List<Point>();
-            pList.Add(p1);
-            pList.Add(p2);
-
-            Console.ReadLine();
+            Console.ReadLine();*/
         }
 
     }
